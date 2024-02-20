@@ -1,6 +1,6 @@
 const form = document.getElementById('agenda_formulario');
 const nomes = [];
-const numeros = [];
+const numeros= [];
 const TotalContatos= document.getElementById('total_contatos')
 let linhas = '';
 
@@ -15,8 +15,8 @@ function adicionaLinha(){
     const inputNome = document.getElementById('nome-contato');
     const inputNumber= document.getElementById('telefone-contato');
 
-    if(nomes.includes(inputNome.value)){
-        alert(`O contato :${inputNome.value} já foi inserido`)
+    if(numeros.includes(Number(inputNumber.value))){
+        alert(`O número :${inputNumber.value} já foi inserido`)
     }
 
     else{
@@ -45,5 +45,6 @@ function contadorContatos(){
 
     let SomadosContatos = 0;
     SomadosContatos = numeros.length;
+    
     TotalContatos.innerHTML = SomadosContatos;
 }
